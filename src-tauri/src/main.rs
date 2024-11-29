@@ -19,7 +19,8 @@ fn main() {
             .add_native_item(MenuItem::Quit),
     );
     tauri::Builder::default()
-        .menu(Menu::new().add_submenu(edit_menu))
+        // .menu(Menu::new().add_submenu(edit_menu))
+        .menu(Menu::new())
         .invoke_handler(tauri::generate_handler![
             command::pakeplus::open_window,
             command::pakeplus::preview_from_config,
